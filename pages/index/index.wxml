@@ -1,0 +1,8 @@
+<import src="../movies/movie-list/movie-intheaters.wxml" />
+<import src="../movies/movie-grid/movie-grid-template.wxml" />
+
+<view class="container" wx:if="{{containerShow}}">
+    <view class="movies-template">
+      <template is="movieIntheaters" data="{{...inTheaters}}" />
+    </view>
+</view>

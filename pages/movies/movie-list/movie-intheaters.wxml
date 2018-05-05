@@ -1,0 +1,18 @@
+<import src="../movie/movie-template.wxml" />
+<template name="movieIntheaters">
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <view class="movie-head">
+        <text class="slogan">{{categoryTitle}}</text>
+      </view>
+
+      <view>
+        <scroll-view scroll-y style="height: 100%">
+          <block wx:for="{{movies}}" wx:for-item="movie" wx:key="key">
+            <template is="movieTemplate" data="{{...movie}}" />
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</template>
